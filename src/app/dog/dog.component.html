@@ -4,35 +4,41 @@
     </div>
     <div class="row mt-5">
         <div class="col">
-            <img src="https://images.dog.ceo/breeds/spaniel-cocker/n02102318_10355.jpg" width="400px" class="shadow rounded">
+            <img [src]="dog1.message" width="400px" class="shadow rounded">
         </div>
         <div class="col">
-            <img src="https://images.dog.ceo/breeds/terrier-welsh/lucy.jpg" width="400px" class="shadow rounded">
+            <img [src]="dog2.message" width="400px" class="shadow rounded">
         </div>
         <div class="col">
-            <img src="https://images.dog.ceo/breeds/mountain-swiss/n02107574_1033.jpg" width="400px" class="shadow rounded">
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col">
-            <h3>Dog 1</h3>
-        </div>
-        <div class="col">
-            <h3>Dog 2</h3>
-        </div>
-        <div class="col">
-            <h3>Dog 3</h3>
+            <img [src]="dog3.message" width="400px" class="shadow rounded">
         </div>
     </div>
     <div class="row mt-3">
         <div class="col">
-            <button class="btn btn-primary">New Dog</button>
+            <span *ngFor="let name1 of getName1()">
+                {{name1 | titlecase}}
+            </span>
         </div>
         <div class="col">
-            <button class="btn btn-primary">New Dog</button>
+            <span *ngFor="let name2 of getName2()">
+                {{name2 | titlecase}}
+            </span>
         </div>
         <div class="col">
-            <button class="btn btn-primary">New Dog</button>
+            <span *ngFor="let name3 of getName3()">
+                {{name3 | titlecase}}
+            </span>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-outline-dark btn-lg">New Dog 1</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-outline-dark btn-lg">New Dog 2</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-outline-dark btn-lg">New Dog 3</button>
         </div>
     </div>
 </div>
